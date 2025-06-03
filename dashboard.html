@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Apon's Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background: #f4f4f4;
+    }
+    h1 {
+      text-align: center;
+    }
+    textarea {
+      width: 100%;
+      height: 300px;
+      margin-bottom: 1rem;
+      font-family: monospace;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .message {
+      margin-top: 10px;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Dashboard - Edit Portfolio Data</h1>
+  <textarea id="editor"></textarea>
+  <br />
+  <button onclick="saveData()">💾 Save Changes</button>
+  <div class="message" id="message"></div>
+
+  <script>
+    async function loadData() {
+      const res = await fetch('data.json');
+      const json = await res.json();
+      document.getElementById('editor').value = JSON.stringify(json, null, 2);
+    }
+
+    function saveData() {
+      const data = document.getElementById('editor').value;
+      try {
+        JSON.parse(data); // check for valid JSON
+        localStorage.setItem('portfolioData', data);
+        document.getElementById('message').textContent = "✅ Changes saved locally!";
+      } catch (e) {
+        document.getElementById('message').textContent = "❌ Invalid JSON!";
+      }
+    }
+
+    loadData();
+  </script>
+
+</body>
+</html>

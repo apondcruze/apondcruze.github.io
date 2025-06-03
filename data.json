@@ -1,0 +1,32 @@
+{
+    "about": {
+      "name": "Apon D'Cruze",
+      "intro": "Hello!! I'm Apon D'Cruze.",
+      "description": "While my academic focus is rooted in technology, I have a profound passion for reading and writing fiction. I have participated in various writing competitions, including one organized by Bangladesh Art Nation.\n\nI also love to do portrait and landscape photography. I want to become a professional photographer if fate is with me.\n\nIn addition to my literary pursuits, I am enthusiastic about broadcasting and aspire to become a professional photographer. As a computer science background student, I want to do some work on cyber security.",
+      "profileLink": "https://github.com/apondcruze"
+    },
+    "skills": ["C", "Java", "HTML", "CSS", "Python"],
+    "projects": [],
+    "education": {
+      "degree": "Bachelor of Computer Science and Engineering",
+      "institution": "University of Asia Pacific",
+      "expectedGraduation": "2026"
+    },
+    "experience": [
+      {
+        "title": "Customer Service Officer",
+        "company": "Uber BD",
+        "duration": "18/01/2022 - 08/03/2022",
+        "description": "Handled customer inquiries, resolved issues, and ensured excellent service to enhance user experience."
+      }
+    ],
+    "social": {
+      "facebook": "https://www.facebook.com/aponwdcruze/",
+      "linkedin": "https://www.linkedin.com/in/apondcruze/",
+      "github": "https://github.com/apondcruze"
+    },
+    "contact": {
+      "email": "apondcruze25@gmail.com"
+    }
+  }
+  

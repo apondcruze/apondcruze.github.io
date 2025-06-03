@@ -1,127 +1,114 @@
-<html lang="en"><head></head>
-	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="Apon">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="author" content="Apon" />
     <title>MyFolio</title>
-	<link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
 
     <!-- Page Navbar -->
-<nav class="custom-navbar" data-spy="affix" data-offset-top="20">
-    <div class="container">
-        <a class="logo" href="#">MyFolio</a>         
-        <ul class="nav" id="navbar">
-            <li class="item">
-                <a class="link" href="#home">Home</a>
-            </li>
-            <li class="item">
-                <a class="link" href="#about">About</a>
-            </li>
-            <li class="item">
-                <a class="link" href="#educational-qualification">Educational Qualification</a>
-            </li>
-            <li class="item">
-                <a class="link" href="#experience">Experience</a>
-            </li>
-            <li class="item">
-                <a class="link" href="#projects">Projects</a>
-            </li>
-            <li class="item">
-                <a class="link" href="#portfolio">Portfolio</a>
-            </li>
-            <li class="item">
-                <a class="link" href="#contact">Contact</a>
-            </li>
-        </ul>
-        <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
-            <div class="hamburger-box">
-                <div class="hamburger-inner"></div>
-            </div>
-        </a>
-    </div>          
-</nav>
-<!-- End of Page Navbar -->
+    <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
+        <div class="container">
+            <a class="logo" href="#">MyFolio</a>
+            <ul class="nav" id="navbar">
+                <li class="item"><a class="link" href="#home">Home</a></li>
+                <li class="item"><a class="link" href="#about">About</a></li>
+                <li class="item"><a class="link" href="#educational-qualification">Educational Qualification</a></li>
+                <li class="item"><a class="link" href="#experience">Experience</a></li>
+                <li class="item"><a class="link" href="#projects">Projects</a></li>
+                <li class="item"><a class="link" href="#portfolio">Portfolio</a></li>
+                <li class="item"><a class="link" href="#contact">Contact</a></li>
+            </ul>
+            <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
+                <div class="hamburger-box">
+                    <div class="hamburger-inner"></div>
+                </div>
+            </a>
+        </div>
+    </nav>
+    <!-- End of Page Navbar -->
 
-<script>
-    let lastScrollTop = 0; // Store the last scroll position
-    const navbar = document.querySelector('.custom-navbar'); // Select the navbar
-    const navToggle = document.getElementById('nav-toggle'); // Select the hamburger icon
-    const navbarLinks = document.getElementById('navbar'); // Select the nav links
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.querySelector('.custom-navbar');
+        const navToggle = document.getElementById('nav-toggle');
+        const navbarLinks = document.getElementById('navbar');
 
-    // Event listener for scrolling
-    window.addEventListener('scroll', function() {
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop; // Current scroll position
-
-        if (scrollTop > lastScrollTop) {
-            // Scrolling down
-            navbar.classList.add('hide'); // Add hide class to navbar
-        } else {
-            // Scrolling up
-            navbar.classList.remove('hide'); // Remove hide class from navbar
-        }
-        
-        lastScrollTop = scrollTop; // Update the last scroll position
-    });
-
-    // Event listener for hamburger menu toggle
-    navToggle.addEventListener('click', function() {
-        navbarLinks.classList.toggle('show'); // Toggle the 'show' class for nav links
-    });
-
-    // Event listeners for each navbar link to hide the menu on click
-    const navItems = document.querySelectorAll('.nav .item a'); // Select all navbar links
-    navItems.forEach(item => {
-        item.addEventListener('click', () => {
-            navbarLinks.classList.remove('show'); // Hide the navbar links
+        window.addEventListener('scroll', function () {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop) {
+                navbar.classList.add('hide');
+            } else {
+                navbar.classList.remove('hide');
+            }
+            lastScrollTop = scrollTop;
         });
-    });
-</script>
 
-<!-- page header -->
-<header id="home" class="header">
-    <div class="overlay"></div>
-    <div class="header-content container">
-        <h1 class="header-title">
-            <span class="up">HI!</span>
-            <span class="down">I am Apon</span>
-        </h1>
-        <p class="header-subtitle">Fictional Writer</p>        
+        navToggle.addEventListener('click', function () {
+            navbarLinks.classList.toggle('show');
+        });
 
-        <a href="https://docs.google.com/document/d/156dfkMnq2HsnM5L31FV84e-FdkHQBs5uyjeQSrwdEtA/edit?usp=sharing" class="btn btn-primary">Visit My Works</a>
+        const navItems = document.querySelectorAll('.nav .item a');
+        navItems.forEach((item) => {
+            item.addEventListener('click', () => {
+                navbarLinks.classList.remove('show');
+            });
+        });
+    </script>
 
-    </div>              
-</header><!-- end of page header -->
+    <!-- page header -->
+    <header id="home" class="header">
+        <div class="overlay"></div>
+        <div class="header-content container">
+            <h1 class="header-title">
+                <span class="up">HI!</span>
+                <span class="down" id="name">I am Apon</span>
+            </h1>
+            <p <p class="header-subtitle" id="title">Fictional Writer</p>
+            <a href="https://docs.google.com/document/d/156dfkMnq2HsnM5L31FV84e-FdkHQBs5uyjeQSrwdEtA/edit?usp=sharing" class="btn btn-primary">Visit My Works</a>
+        </div>
+    </header>
+    <!-- end of page header -->
 
     <!-- about section -->
     <section class="section pt-0" id="about">
-        <!-- container -->
         <div class="container text-center">
-            <!-- about wrapper -->
             <div class="about">
                 <div class="about-img-holder">
-                    <img src="413795654_3652544441669443_7051462369232370236_n.jpg" class="about-img" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, MyFolio Landing page">
+                    <img src="413795654_3652544441669443_7051462369232370236_n.jpg" class="about-img" alt="Apon D'Cruze Portrait" />
                 </div>
                 <div class="about-caption">
                     <h2 class="section-title mb-3">About Me</h2>
-                    <p>
-                        Hello!! I'm Apon D'Cruze. 
-                        <br>While my academic focus is rooted in technology, I have a profound passion for reading and writing fiction. I have participated in various writing competitions, including one organized by Bangladesh Art Nation, where I achieved a top 30 ranking nationwide.
-                        <br>In addition to my literary pursuits, I am enthusiastic about broadcasting and aspire to become a Radio Jockey. I also have a strong interest in photography and plan to pursue it as a professional career in the future.
+                    <p id="about-text">
+                        Hello!! I'm Apon D'Cruze.<br />
+                        While my academic focus is rooted in technology, I have a profound passion for reading and writing fiction. I have participated in various writing competitions, including one organized by Bangladesh Art Nation.<br />
+                        I also love to do portrait and landscape photography. I want to become a professional photographer if fate is with me.<br />
+                        In addition to my literary pursuits, I am enthusiastic about broadcasting and aspire to become a professional photographer. As a computer science background student, I want to do some work on cyber security.<br />
+                        Profile link will be given later.
                     </p>
                     <a href="https://drive.google.com/file/d/1swAoeaa-2yGD2BRQEZIwxOuCEoiRHDYj/view?usp=sharing" class="btn-rounded btn btn-outline-primary mt-4" download="Apon_DCruze_CV.pdf">Download CV</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end of about section -->
 
-                </div>              
-            </div><!-- end of about wrapper -->
-        </div><!-- end of container -->
-    </section> <!-- end of about section -->
+    <!-- skills section -->
+    <section class="section" id="skills">
+        <div class="container text-center">
+            <h6 class="section-title mb-6">Skills</h6>
+            <p>C, Java, HTML, CSS, Python, etc.</p>
+        </div>
+    </section>
+    <!-- end of skills section -->
 
     <section class="section" id="educational-qualification">
         <div class="container text-center">
             <h6 class="section-title mb-6">Educational Qualification</h6>
-            <!-- row -->
             <div class="row justify-content-center">
                 <div class="col-md-6">
                     <div class="qualification-box">
@@ -130,62 +117,51 @@
                         <p><strong>Expected Graduation:</strong> 2026</p>
                     </div>
                 </div>
-            </div><!-- end of row -->
-        </div><!-- end of container -->
+            </div>
+        </div>
     </section>
-    
-  <section class="section" id="experience">
-    <div class="container text-center">
-        <h6 class="section-title mb-6">Experience</h6>
-        <!-- row -->
-        <div class="row justify-content-center">
-            <div class="col-md-4">
-                <div class="experience-box">
-                    <p><strong>Customer Service Officer</strong></p>
+
+    <section class="section" id="experience">
+        <div class="container text-center">
+            <h6 class="section-title mb-6">Experience</h6>
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <div class="experience-box">
+                        <p><strong>Customer Service Officer</strong></p>
+                        <p>Uber BD</p>
+                        <p><strong>Duration:</strong> 18/01/2022 - 08/03/2022</p>
+                        <p>Responsible for handling customer inquiries, resolving issues, and providing excellent service to enhance user experience.</p>
                     </div>
-                    <p>Uber BD</p>
-                    <p><strong>Duration:</strong> 18/01/2022 - 08/03/2022</p>
-                    <p>Responsible for handling customer inquiries, resolving issues, and providing excellent service to enhance user experience.</p>
                 </div>
             </div>
-        </div><!-- end of row -->
-    </div><!-- end of container -->
-</section>
+        </div>
+    </section>
 
-
-<section class="section" id="projects">
-    <div class="container text-center">
-        <h6 class="section-title mb-6">Projects</h6>
-        <!-- row -->
-        <div class="row justify-content-center">
-            <div class="col-md-4">
-                <div class="project-box">
-                    <p><strong>Details will be added later</strong></p>
-                </div>
-            </div>
-        </div><!-- end of row -->
-    </div><!-- end of container -->
-</section> 
+    <!-- projects section -->
+    <section class="section" id="projects">
+        <div id="projects-list"></div>
+            <h6 class="section-title mb-6">Projects</h6>
+            <p>Details will be added later.</p>
+        </div>
+    </section>
+    <!-- end of projects section -->
 
     <!-- portfolio section -->
     <section class="section" id="portfolio">
         <div class="container text-center">
             <h6 class="section-title mb-6">Portfolio</h6>
-            <!-- row -->
             <div class="row d-flex align-items-center justify-content-center" style="height: 200px;">
                 <div class="portfolio-box">
                     <p><strong>Details will be added later</strong></p>
                 </div>
-            </div><!-- end of row -->
-        </div><!-- end of container -->
-    </section><!-- end of portfolio section -->
-    
+            </div>
+        </div>
+    </section>
+    <!-- end of portfolio section -->
 
-    <!-- section -->
+    <!-- call to action section -->
     <section class="section-sm bg-primary">
-        <!-- container -->
         <div class="container text-center text-sm-left">
-            <!-- row -->
             <div class="row align-items-center">
                 <div class="col-sm offset-md-1 mb-4 mb-md-0">
                     <h6 class="title text-light">Want to work with me?</h6>
@@ -194,37 +170,38 @@
                 <div class="col-sm offset-sm-2 offset-md-3">
                     <a href="mailto:apondcruze25@gmail.com" class="btn btn-lg my-font btn-light rounded">Hire Me</a>
                 </div>
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </section> <!-- end of section -->
+            </div>
+        </div>
+    </section>
+    <!-- end of call to action -->
 
     <!-- contact section -->
     <section class="section" id="contact">
         <div class="container text-center">
             <h6 class="section-title mb-5">Contact Me</h6>
-            <!-- contact form -->
             <form action="" class="contact-form col-md-10 col-lg-8 m-auto">
                 <div class="form-row">
                     <div class="form-group col-sm-6">
-                        <input type="text" size="50" class="form-control" placeholder="Your Name" required="">                 
+                        <input type="text" size="50" class="form-control" placeholder="Your Name" required="" />
                     </div>
                     <div class="form-group col-sm-6">
-                        <input type="email" class="form-control" placeholder="Enter Email" required="">                 
+                        <input type="email" class="form-control" placeholder="Enter Email" required="" />
                     </div>
                     <div class="form-group col-sm-12">
                         <textarea name="comment" id="comment" rows="6" class="form-control" placeholder="Write Something"></textarea>
                     </div>
                     <div class="form-group col-sm-12 mt-3">
-                        <input type="submit" value="Send Message" class="btn btn-outline-primary rounded">                  
+                        <input type="submit" value="Send Message" class="btn btn-outline-primary rounded" />
                     </div>
-                </div>  
-            </form><!-- end of contact form -->
-        </div><!-- end of container -->
-    </section><!-- end of contact section -->
-    
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- end of contact section -->
+
     <!-- footer -->
     <div class="container">
-        <footer class="footer">       
+        <footer class="footer">
             <p class="mb-0">Copyright <script>document.write(new Date().getFullYear())</script> © <a href="">Apon D'Cruze</a></p>
             <div class="social-links text-right m-auto ml-sm-auto">
                 <a href="https://www.facebook.com/aponwdcruze/" class="link"><i class="fab fa-facebook"></i></a>
@@ -233,19 +210,50 @@
             </div>
         </footer>
     </div>
-     <!-- end of page footer -->
-	
-	<!-- core  -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- end of page footer -->
 
-    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
-
-    <!-- bootstrap 3 affix -->
-	<script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
-
-    <!-- Meyawo js -->
-    <script src="assets/js/meyawo.js"></script>
-
-
-
-</body></html>
+    <!-- core  -->
+    <script>
+        async function loadPortfolioData() {
+          try {
+            const res = await fetch('data.json');
+            const data = await res.json();
+      
+            // Update name, title, about
+            document.getElementById('name').textContent = `I am ${data.about.name}`;
+            document.getElementById('title').textContent = data.about.title;
+            document.getElementById('about-text').textContent = data.about.bio;
+      
+            // Skills
+            const skillsList = document.getElementById('skills-list');
+            if (skillsList && data.skills.length) {
+              skillsList.innerHTML = '';
+              data.skills.forEach(skill => {
+                const li = document.createElement('li');
+                li.textContent = skill;
+                skillsList.appendChild(li);
+              });
+            }
+      
+            // Projects
+            const projectsList = document.getElementById('projects-list');
+            if (projectsList && data.projects.length) {
+              projectsList.innerHTML = '';
+              data.projects.forEach(project => {
+                const div = document.createElement('div');
+                div.className = 'project-box';
+                div.innerHTML = `<p><strong>${project.name}</strong></p><p>${project.description}</p>`;
+                projectsList.appendChild(div);
+              });
+            }
+      
+          } catch (err) {
+            console.error("Failed to load data.json", err);
+          }
+        }
+      
+        loadPortfolioData();
+      </script>
+      
+</body>
+</html>
